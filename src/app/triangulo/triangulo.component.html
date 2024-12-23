@@ -1,0 +1,35 @@
+<ion-list lines="none">
+  <ion-item>
+    <h3>Triángulo</h3>
+  </ion-item>
+  <ion-card>
+    <img id="perimetroTriangulo" src="assets/images/perimetro-triangulo.png" />
+    <ion-card-header>
+      <ion-card-title>Perímetro</ion-card-title>
+      <ion-card-subtitle>El perímetro de un triángulo es la suma de sus tres lados</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Donde:
+      <br>
+      a; b y c corresponde a sus lados
+    </ion-card-content>
+  </ion-card>
+  <ion-item>
+    <ion-input [(ngModel)]="ladoAStr" type="number" label="Lado A (cm)"  labelPlacement="stacked" fill="solid" maxlength="100"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="ladoBStr"  type="number" label="Lado B (cm)" labelPlacement="stacked" fill="solid" maxlength="100"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="ladoCStr" type="number" label="Lado C (cm)" labelPlacement="stacked" fill="solid" maxlength="100"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-button (click)="calcularPerimetro()">
+    CALCULAR PERIMETRO
+  </ion-button>
+  </ion-item>
+  <ion-item>
+    {{resultado}}
+  </ion-item>
+</ion-list>
